@@ -1,58 +1,160 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+  <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" width="120" alt="Todo App Logo">
 </p>
 
-## About Laravel
+<h1 align="center">Todo App with Authentication</h1>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<p align="center">
+  A Laravel-based Todo Management Application with User Authentication and Personal Task Management
+</p>
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="center">
+  <img src="https://img.shields.io/badge/Laravel-12-red" alt="Laravel Version">
+  <img src="https://img.shields.io/badge/PHP-8%2B-blue" alt="PHP Version">
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
+</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## About Project
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+This is a full-stack Todo Management Application built with **Laravel** that allows authenticated users to manage their own todo tasks securely.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Each user can:
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+* Register / Login to their account
+* Create personal todo tasks
+* Edit existing todos
+* Delete todos with confirmation modal
+* Update task status (Pending / Completed)
+* View only their own todos
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## Features
+
+* Authentication System
+* Protected Routes
+* User-specific Todo Management
+* Todo CRUD Operations
+* Modal-based Edit/Delete
+* Form Validation
+* Responsive Tailwind CSS UI
+
+---
+
+## Tech Stack
+
+* **Backend:** Laravel
+* **Frontend:** Blade + Tailwind CSS
+* **Database:** MySQL
+* **JavaScript:** jQuery
+
+---
+
+## Screenshots
+
+### Login Page
+
+<img width="1909" height="833" alt="image" src="https://github.com/user-attachments/assets/a02dae13-ec4f-45da-8a6c-357f6edba424" />
+
+
+### Register Page
+
+<img width="1157" height="862" alt="image" src="https://github.com/user-attachments/assets/4e4fbe76-f557-4129-8ef6-fd9ee603613b" />
+
+
+### Todo Dashboard
+<img width="1533" height="875" alt="image" src="https://github.com/user-attachments/assets/9a3a9db6-a2df-4a9a-b48f-ded6aeda5226" />
+
+
+### Edit Modal
+
+<img width="1674" height="877" alt="image" src="https://github.com/user-attachments/assets/212369d2-e2e6-48ae-9074-c62d9abeb0c0" />
+<img width="1440" height="853" alt="image" src="https://github.com/user-attachments/assets/d76a0c99-af8f-4ff8-a04e-1d02a1491388" />
+
+
+---
+
+## Installation Guide
+
+### Clone Repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/smit0164/to_do_with_auth.git
+cd to_do_with_auth
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### Install Dependencies
 
-## Contributing
+```bash
+composer install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Setup Environment
 
-## Code of Conduct
+```bash
+cp .env.example .env
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Configure Database
 
-## Security Vulnerabilities
+Update your `.env` file:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```env
+DB_DATABASE=your_database_name
+DB_USERNAME=your_database_username
+DB_PASSWORD=your_database_password
+```
+
+### Run Migrations
+
+```bash
+php artisan migrate
+```
+
+### Start Server
+
+```bash
+php artisan serve
+```
+
+Visit:
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+## Project Structure Highlights
+
+* One-to-Many Relationship between User and Todos
+* Secure Authorization for Todo Ownership
+* Dynamic Edit/Delete Modals
+* Clean Blade Component Structure
+
+---
+
+## Future Enhancements
+
+* AJAX CRUD Operations
+* Search / Filter Todos
+* Pagination
+* Drag & Drop Sorting
+* Dark Mode Support
+
+---
+
+## Author
+
+**Smit Patel**
+
+* GitHub: https://github.com/smit0164
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This project is open-sourced software licensed under the MIT license.
